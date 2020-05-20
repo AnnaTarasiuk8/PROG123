@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+@model PROG123.Models.PersonModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditPerson</title>
+</head>
+<body>
+    <h1> Edite page  </h1>
+    <form asp-action="UpdatePerson" method="post">
+
+
+        <input asp-for="UserName" value=" @Model.UserName" readonly /> <br />
+        <input asp-for="PersonID" value=" @Model.PersonID" readonly /> <br />
+        <label>enter new data</label><br />
+        <label>First Name </label> <input asp-for="FName" /> <br />
+        <label>Last Name </label> <input asp-for="LName" /> <br />
+        <label>Email </label> <input asp-for="Email" /> <br />
+        <label>Phone</label> <input asp-for="Phone" /> <br />
+        <label>Address</label> <input asp-for="Address" /> <br />
+
+        <label>Password </label> <input asp-for="Password" /> <br />
+
+        <input type="submit" />
+    </form>
+    <form asp-action="DeletePerson" method="post">
+
+
+        <input asp-for="PersonID" value="@Model.PersonID" readonly /> <br />
+       
+
+        <input type="submit" value="delete Person"/>
+    </form>
+</body>
+</html>

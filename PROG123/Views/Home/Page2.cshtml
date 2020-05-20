@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+@model PROG123.Models.PersonModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Page2</title>
+    
+</head>
+<body>
+    <h1> Welcome to Page #2 </h1>
+    <br />
+    @Model.FName
+    <br />
+    @Model.LName
+    <br />
+    @Model.Email
+    <br />
+    @Model.Phone
+    <br />
+    @Model.Address
+    <br />
+   asp-for="UserName" @Model.UserName
+    <br />
+    @Model.Password
+    <br />
+    
+    @Html.ActionLink("edit", "EditPerson", "Home")
+
+</body>
+</html>
